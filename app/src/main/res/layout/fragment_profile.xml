@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/tv_update_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white_greyish"
+            android:text="Update Your Profile "
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/et_pro_firstname"
+            android:hint="@string/first_name"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/user"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish" />
+        <EditText
+            android:id="@+id/et_pro_lastname"
+            android:hint="@string/last_name"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/user"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish" />
+        <EditText
+            android:id="@+id/et_pro_address"
+            android:hint="@string/address"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/location"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish" />
+        <EditText
+            android:id="@+id/et_pro_mobile"
+            android:hint="@string/mobile"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/phone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish" />
+
+        <EditText
+            android:id="@+id/et_pro_email"
+            android:hint="@string/email"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/email"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish" />
+        <Button
+            android:id="@+id/btn_update_profile"
+            style="@style/LogSignBtnTheme"
+            android:text="@string/update_profile"
+            android:textColor="@color/background"
+            android:background="@drawable/loginbutton_selector"/>
+
+        <EditText
+            android:id="@+id/et_cur_mobile"
+            android:hint="@string/mobile"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/phone"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish" />
+        <EditText
+            android:id="@+id/et_cur_password"
+            android:hint="@string/password"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/password"
+            android:inputType="textPassword"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish"/>
+        <EditText
+            android:id="@+id/et_new_password"
+            android:hint="@string/password"
+            style="@style/LogSignEdtTheme"
+            android:drawableLeft="@drawable/password"
+            android:inputType="textPassword"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white_greyish"/>
+        <Button
+            android:id="@+id/btn_reset_password"
+            style="@style/LogSignBtnTheme"
+            android:text="@string/reset_password"
+            android:textColor="@color/background"
+            android:background="@drawable/loginbutton_selector"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">OnlineShopping</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in_with_mobile">LOG IN WITH MOBILE</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="agree">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="go_to_login">Already have Account? Log in here</string>
+    <string name="validating">Validating the Mobile and Password</string>
+    <string name="log_in_error">Log in error</string>
+    <string name="sign_up_empty">Please fill all the text fields</string>
+    <string name="mobile_invaild">The mobile should be 10 digits</string>
+    <string name="password_invaild">The password should be at least 6 digits</string>
+    <string name="please_agree">Please agree the Terms and Conditions</string>
+    <string name="mobile_number_invalid">The mobile number is not valid</string>
+    <string name="profile">Profile</string>
+    <string name="shop">Shop</string>
+    <string name="order">Order</string>
+    <string name="log_out">Log out</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="error">error</string>
+</resources>
