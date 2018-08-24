@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_createapassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_size"
+        android:text="Create a password"
+        android:textColor="@color/black"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_below="@id/tv_createapassword"
+        android:layout_alignLeft="@id/tv_createapassword">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:gravity="start"
+            android:ellipsize="start"
+            android:inputType="textPassword"
+            style="@style/LogSignEdtTheme"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/v_v1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/text_input_layout"
+        android:background="@color/grey"/>
+    <TextView
+        android:id="@+id/tv_atleastpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_v1"
+        android:layout_alignLeft="@id/v_v1"
+        android:text="At least 6 digits" />
+
+    <View
+        android:id="@+id/v_v2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+    <TextView
+        android:id="@+id/tv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_atleastpassword"
+        android:layout_below="@id/v_v2"
+        android:layout_alignRight="@id/text_input_layout"
+        android:text="When you Register, you agree to User Agreement and acknowledge reading our User Privacy Notice"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_passwordlayout"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_agree"
+        android:orientation="vertical"
+        android:layout_alignLeft="@id/tv_agree"
+        android:layout_alignRight="@id/tv_agree">
+
+        <TextView
+            android:id="@+id/tv_useragreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="USER AGREEMENT"
+            android:textColor="@color/background"/>
+        <TextView
+            android:layout_marginTop="50dp"
+            android:id="@+id/tv_userprivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="USER PRIVACY NOTICE"
+            android:textColor="@color/background"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_passwordlayout"
+        android:layout_marginTop="30dp"
+        android:text="Create your account"
+        />
+
+</RelativeLayout>

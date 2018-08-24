@@ -1,11 +1,11 @@
-package com.example.android.onlineshopping;
+package com.example.android.onlineshopping.ui.auth;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.android.onlineshopping.ui.LoginFragment;
+import com.example.android.onlineshopping.R;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

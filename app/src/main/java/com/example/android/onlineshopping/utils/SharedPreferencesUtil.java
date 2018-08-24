@@ -12,7 +12,6 @@ public class SharedPreferencesUtil {
     /**
      * set the SharedPreference of the profiles for account
      * @param context
-     * @param msg
      * @param id
      * @param firstname
      * @param lastname
@@ -20,9 +19,8 @@ public class SharedPreferencesUtil {
      * @param mobile
      * @param appapikey
      */
-    public static void setUserInfo(Context context, String msg, String id, String firstname, String lastname, String email, String mobile, String appapikey){
+    public static void setUserInfo(Context context, String id, String firstname, String lastname, String email, String mobile, String appapikey){
         SharedPreferences.Editor editor = getSp(context).edit();
-        editor.putString("msg", msg);
         editor.putString("id", id);
         editor.putString("firstname", firstname);
         editor.putString("lastname", lastname);
@@ -40,6 +38,20 @@ public class SharedPreferencesUtil {
         editor.putString("mobile", mobile);
         editor.commit();
     }
+
+    public static void clearUserInfo(Context context) {
+        SharedPreferences.Editor editor = getSp(context).edit();
+        editor.putString("id", null);
+        editor.putString("firstname", null);
+        editor.putString("lastname", null);
+        editor.putString("email", null);
+        editor.putString("mobile", null);
+        editor.putString("appapikey", null);
+        editor.commit();
+    }
+
+
+
 
     /**
      * set the SharedPreference for the mobile
@@ -60,4 +72,6 @@ public class SharedPreferencesUtil {
     public static String getRemember(Context context){
         return getSp( context ).getString( "remember", null );
     }
+
+
 }

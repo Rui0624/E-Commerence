@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.product.TechFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=" Volley\n Material Design \n MaterialRatingBar \n EvenBus \n Glide\n Braintree \n QBadgeView \n RecyclerView \n CardLaylout\n DrawerLayout \n HttpConnection \n AsyncTask \n Fragment\n NavigationView \n TextInputLayout \n SharePreference \n "
+        android:textSize="20dp"/>
+
+</FrameLayout>

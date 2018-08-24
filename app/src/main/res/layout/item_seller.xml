@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding = "true"
+        card_view:cardBackgroundColor="@color/card_background"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/small_size">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_seller_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/normal_size"
+                    android:layout_marginLeft="@dimen/small_size"
+                    android:src="@drawable/ic_fire"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_seller_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_size"
+                    android:layout_marginTop="@dimen/small_size"
+                    android:layout_gravity="center"
+                    android:text="example"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rb_seller_rating"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    android:rating="4.5"
+                    android:layout_marginTop="@dimen/normal_size"
+                    android:layout_marginLeft="@dimen/normal_size"
+                    style="@style/Widget.MaterialRatingBar.RatingBar.Small"/>
+
+                <TextView
+                    android:id="@+id/tv_seller_deal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_size"
+                    android:layout_marginLeft="@dimen/normal_size"
+                    android:text="deal"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

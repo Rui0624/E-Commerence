@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#666666"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingStart="@dimen/medium_size"
         android:paddingEnd="@dimen/medium_size">
 
@@ -18,13 +18,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:src="@drawable/ic_avatar" />
+            android:src="@drawable/ic_avatar"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="username"
-            android:textColor="@color/white" />
+            android:layout_marginLeft="@dimen/normal_size"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 </FrameLayout>

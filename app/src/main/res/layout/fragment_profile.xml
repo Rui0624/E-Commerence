@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProfileFragment">
+    tools:context=".ui.auth.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
         android:orientation="vertical"
         android:paddingTop="20dp">
 
@@ -20,13 +19,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@color/white_greyish"
+            android:textColor="@color/black"
             android:text="Update Your Profile "
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <EditText
-            android:id="@+id/et_pro_firstname"
+        <TextView
+            android:id="@+id/tv_pro_firstname"
             android:hint="@string/first_name"
             style="@style/LogSignEdtTheme"
             android:drawableLeft="@drawable/user"/>
@@ -37,30 +36,20 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@color/white_greyish" />
-        <EditText
-            android:id="@+id/et_pro_lastname"
+        <TextView
+            android:id="@+id/tv_pro_lastname"
             android:hint="@string/last_name"
             style="@style/LogSignEdtTheme"
             android:drawableLeft="@drawable/user"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@color/white_greyish" />
-        <EditText
-            android:id="@+id/et_pro_address"
-            android:hint="@string/address"
-            style="@style/LogSignEdtTheme"
-            android:drawableLeft="@drawable/location"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@color/white_greyish" />
-        <EditText
-            android:id="@+id/et_pro_mobile"
+        <TextView
+            android:id="@+id/tv_pro_mobile"
             android:hint="@string/mobile"
             style="@style/LogSignEdtTheme"
             android:drawableLeft="@drawable/phone"/>
@@ -91,8 +80,8 @@
             android:textColor="@color/background"
             android:background="@drawable/loginbutton_selector"/>
 
-        <EditText
-            android:id="@+id/et_cur_mobile"
+        <TextView
+            android:id="@+id/tv_cur_mobile"
             android:hint="@string/mobile"
             style="@style/LogSignEdtTheme"
             android:drawableLeft="@drawable/phone"/>
@@ -104,7 +93,7 @@
             android:background="@color/white_greyish" />
         <EditText
             android:id="@+id/et_cur_password"
-            android:hint="@string/password"
+            android:hint="@string/current_password"
             style="@style/LogSignEdtTheme"
             android:drawableLeft="@drawable/password"
             android:inputType="textPassword"/>
@@ -116,7 +105,7 @@
             android:background="@color/white_greyish"/>
         <EditText
             android:id="@+id/et_new_password"
-            android:hint="@string/password"
+            android:hint="@string/new_password"
             style="@style/LogSignEdtTheme"
             android:drawableLeft="@drawable/password"
             android:inputType="textPassword"/>

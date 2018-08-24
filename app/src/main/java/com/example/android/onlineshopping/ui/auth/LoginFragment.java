@@ -1,8 +1,10 @@
-package com.example.android.onlineshopping.ui;
+package com.example.android.onlineshopping.ui.auth;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.android.onlineshopping.HomeActivity;
 import com.example.android.onlineshopping.R;
 import com.example.android.onlineshopping.utils.MainControllor;
 import com.example.android.onlineshopping.utils.SharedPreferencesUtil;
@@ -30,12 +33,10 @@ import org.json.JSONObject;
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
     private EditText et_mobile, et_password;
-    private CheckBox cbx_remember;
-    private TextView tv_forgotpassword, tv_gotosignup;
     private Button btn_signin;
-    private ImageView iv_close;
     private static final String TAG = "Fragment Login";
     private ProgressDialog progress;
+    private TextView tv_create_account;
 
 
     @Override
@@ -55,28 +56,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     private void initView(View view){
         et_mobile = view.findViewById(R.id.et_mobile);
         et_password = view.findViewById( R.id.et_password );
-        cbx_remember = view.findViewById( R.id.cbx_remember );
-
-        tv_forgotpassword = view.findViewById(R.id.tv_forgot_password);
-        tv_forgotpassword.setOnClickListener(this);
-
-        tv_gotosignup = view.findViewById( R.id.tv_go_to_sign_up );
-        tv_gotosignup.setOnClickListener(this);
+        tv_create_account = view.findViewById(R.id.tv_create_account);
+        tv_create_account.setOnClickListener(this);
 
         btn_signin = view.findViewById( R.id.btn_sign_in);
         btn_signin.setOnClickListener(this);
 
-        iv_close = view.findViewById(R.id.iv_close);
-        iv_close.setOnClickListener(this);
 
         String remember = SharedPreferencesUtil.getRemember(getContext());
 
-        if(remember != null){
-            et_mobile.setText(remember);
-            cbx_remember.setChecked(true);
-        }else {
-            cbx_remember.setChecked(false);
-        }
+        et_mobile.setText(remember);
 
     }
 
@@ -96,7 +85,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 //save the Remember of mobile for log in
                 saveCredentials();
 
-                if(Util.getUtilInstance().isValidMobile(et_mobile.getText().toString())){
+                if(!Util.getUtilInstance().isValidMobile(et_mobile.getText().toString())){
                     progress.dismiss();
                     Toast.makeText(getContext(), R.string.mobile_number_invalid, Toast.LENGTH_SHORT).show();
                 }
@@ -124,10 +113,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                                     String lastname = jsonObject.getString("lastname");
                                     String email = jsonObject.getString("email");
                                     String mobile = jsonObject.getString("mobile");
-                                    String appapikey = jsonObject.getString("appapikey");
+                                    String appapikey = jsonObject.getString("appapikey ");
 
-                                    SharedPreferencesUtil.setUserInfo(getContext(), msg, id, firstname, lastname, email, mobile, appapikey);
 
+//                                     setUserInfo(Context context, String id, String firstname, String lastname, String email, String mobile, String appapikey){
+//
+//                                    }
+                                    SharedPreferencesUtil.setUserInfo(getContext(), id, firstname, lastname, email, mobile, appapikey);
+
+                                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+                                    startActivity(intent);
                                     progress.dismiss();
                                 }
                             }catch (JSONException e){
@@ -140,6 +135,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             VolleyLog.e("error", error.getMessage());
+                            Log.i("error", error.getMessage());
                             Toast.makeText(getContext(), R.string.log_in_error, Toast.LENGTH_SHORT).show();
                             progress.dismiss();
                         }
@@ -152,7 +148,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             }
-            case R.id.tv_go_to_sign_up:
+            case R.id.tv_create_account:
             {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, new RegistrationFragment(), "signup")
@@ -161,21 +157,13 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 break;
             }
 
-            case R.id.iv_close:
-            {
-                saveCredentials();
-                //close app
-                System.exit(0);
-                break;
-            }
+
 
         }
     }
 
     public void saveCredentials(){
-
-        if(cbx_remember.isChecked())
-            SharedPreferencesUtil.setRemember(getContext(), et_mobile.getText().toString());
+        SharedPreferencesUtil.setRemember(getContext(), et_mobile.getText().toString());
 
     }
 }

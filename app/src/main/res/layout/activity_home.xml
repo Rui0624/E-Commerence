@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/tool_layout"/>
+        <include layout="@layout/layout_toolbar"/>
 
         <FrameLayout
             android:id="@+id/content"
@@ -29,7 +29,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
-        app:headerLayout="@layout/head_layout"
+        app:headerLayout="@layout/layout_head"
         app:menu="@menu/menu"
         >
 

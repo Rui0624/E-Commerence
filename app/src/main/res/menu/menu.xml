@@ -17,9 +17,20 @@
             android:icon="@drawable/ic_order"
             android:title="@string/order"
             app:showAsAction="always"/>
+        <item
+            android:id="@+id/seller"
+            android:icon="@drawable/ic_fire"
+            android:title="Top Seller"
+            app:showAsAction="always"/>
     </group>
 
     <group android:id="@+id/group2">
+        <item
+            android:id="@+id/techology"
+            android:icon="@drawable/ic_tech"
+            android:title="@string/techology"
+            app:showAsAction="ifRoom"/>
+
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_logout"
